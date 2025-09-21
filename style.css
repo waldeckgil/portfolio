@@ -1,0 +1,282 @@
+/* Estilos Globais */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #e0f0ff, #f9fbff);
+    color: #222;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Cabeçalho (Header) */
+header {
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    color: #fff;
+    padding: 3rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 0 0 20px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.8rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+.top-logo {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    opacity: 0.95;
+}
+
+/* Seções Principais */
+main {
+    padding: 2rem 0;
+}
+
+section {
+    background: #ffffffdd;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0, 123, 255, 0.15);
+    border: 1px solid #cce0ff;
+}
+
+section h2 {
+    color: #0056b3;
+    border-bottom: 3px solid #007bff;
+    padding-bottom: 10px;
+    margin-top: 0;
+    font-weight: 700;
+}
+
+/* Estilos do Formulário */
+#quiz-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.form-group {
+    background: #f0f8ff;
+    border: 1px solid #a3c0ff;
+    border-radius: 12px;
+    padding: 12px 15px;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    font-size: 0.9rem;
+}
+
+.form-group label {
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #004085;
+    font-size: 0.95rem;
+}
+
+.question-label {
+    color: #dc3545; /* cor destacada para perguntas */
+}
+
+.radio-group label, .checkbox-group label {
+    color: #333; /* cor para as respostas */
+}
+
+.radio-group, .checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+input[type="email"], input[type="text"] {
+    padding: 12px 15px;
+    border: 1px solid #a3c0ff;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #f9fbff;
+    transition: border-color 0.3s ease;
+}
+
+input[type="email"]:focus, input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.form-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+button[type="submit"] {
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(90deg, #0056b3, #003d7a);
+}
+
+.whatsapp-icon-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #25D366;
+    color: white;
+    font-size: 1.8rem;
+    padding: 12px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.6);
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-icon-button:hover {
+    background-color: #1ebe57;
+}
+
+/* Rodapé (Footer) */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    color: #fff;
+    margin-top: auto;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Animações e Transições */
+.form-group {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.2);
+}
+
+button[type="submit"] {
+    transition: all 0.3s ease;
+}
+
+.whatsapp-icon-button {
+    transition: all 0.3s ease;
+}
+
+/* Estados de Loading e Feedback */
+#loading-spinner {
+    display: none;
+}
+
+#form-feedback {
+    display: none;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.feedback-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.feedback-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .container {
+        padding: 0 0.5rem;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+
+    #quiz-form {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .whatsapp-icon-button {
+        font-size: 1.5rem;
+        padding: 10px 15px;
+    }
+
+    .top-logo {
+        max-width: 250px;
+        margin: 15px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 2rem 1rem;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .features {
+        flex-direction: column;
+    }
+
+    .feature-item {
+        margin-bottom: 1rem;
+    }
+
+    .top-logo {
+        max-width: 200px;
+        margin: 10px auto;
+    }
+}
