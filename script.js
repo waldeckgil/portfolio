@@ -125,13 +125,12 @@ form.addEventListener('submit', async (event) => {
         // Substitui o conteúdo do formulário por uma mensagem de agradecimento
         form.innerHTML = '<p style="font-size: 1.2rem; color: #155724; background-color: #d4edda; padding: 20px; border-radius: 8px; border: 1px solid #c3e6cb;">Sua mensagem é muito importante para nós. Vamos analisar suas informações e te responder em breve. !</p>';
 
-        // Chama a função serverless para enviar o e-mail
+        // Chama o serviço de back-end para enviar o e-mail
         try {
-            const emailResponse = await fetch('https://gjaeiepqzlqhyiqnqxoc.supabase.co/functions/v1/sendEmail', {
+            const emailResponse = await fetch('SUA_URL_DO_VERCEL/send-email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
                 },
                 body: JSON.stringify(respostas),
             });
