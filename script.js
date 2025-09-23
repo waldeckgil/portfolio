@@ -127,7 +127,7 @@ form.addEventListener('submit', async (event) => {
 
         // Chama o serviço de back-end para enviar o e-mail
         try {
-            const emailResponse = await fetch('SUA_URL_DO_VERCEL/send-email', {
+            const emailResponse = await fetch('https://portfolio-email-service-o8jv.onrender.com/send-email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
